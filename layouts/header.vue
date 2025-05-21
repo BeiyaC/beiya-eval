@@ -19,5 +19,6 @@ const nav = [
   { label: 'home', slug: '' },
   { label: 'your cart', slug: 'cart' },
   { label: 'admin', slug: 'admin' },
+  { label: 'login', slug: 'login' },
 ]
 </script>
