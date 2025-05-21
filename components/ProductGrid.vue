@@ -9,10 +9,9 @@
 </template>
 
 <script setup lang="ts">
-import type { Product } from '@/types/product'
 
 defineProps<{
-  products: [Product]
+  products: any
 }>()
 
 </script>
