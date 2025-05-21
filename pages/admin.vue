@@ -58,4 +58,8 @@ const generateData = async () => {
 }
 
 onMounted(checkIfCanGenerate)
+
+definePageMeta({
+  middleware: 'auth'
+})
 </script>
