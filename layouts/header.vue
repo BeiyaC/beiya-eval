@@ -16,8 +16,8 @@
 
 <script setup lang="ts">
 const nav = [
-  { label: 'index', slug: 'home' },
-  { label: 'cart', slug: 'your cart' },
+  { label: 'home', slug: '' },
+  { label: 'your cart', slug: 'cart' },
   { label: 'admin', slug: 'admin' },
 ]
 </script>

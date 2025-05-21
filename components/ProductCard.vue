@@ -23,13 +23,7 @@
 </template>
 
 <script setup lang="ts">
-interface Product {
-  id: string
-  name: string
-  description: string
-  price: number
-  stock: number
-}
+import type { Product } from '@/types/product'
 
 defineProps<{
   product: Product
