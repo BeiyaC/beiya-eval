@@ -7,11 +7,20 @@
   </div>
 </template>
 <script setup lang="ts">
-
 const products = ref([])
+const pending = ref(true)
+const error = ref('')
 
-onMounted(() => {
-  const stored = localStorage.getItem('products')
-  products.value = stored ? JSON.parse(stored) : []
+onMounted(async () => {
+  pending.value = true
+  try {
+    const res = await $fetch('/api/products/all')
+    products.value = res
+    error.value = ''
+  } catch (e) {
+    error.value = 'API unreachable'
+  } finally {
+    pending.value = false
+  }
 })
 </script>
