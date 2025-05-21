@@ -20,7 +20,6 @@
 </template>
 
 <script setup lang="ts">
-import { ref, onMounted } from 'vue'
 
 const canGenerate = ref(false)
 const loading = ref(false)

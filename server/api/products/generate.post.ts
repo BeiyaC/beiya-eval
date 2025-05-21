@@ -6,11 +6,9 @@ export default defineEventHandler(async() => {
         id: faker.string.uuid(),
         name: faker.commerce.productName(),
         description: faker.commerce.productDescription(),
-        price: +faker.commerce.price(),
-        category: faker.commerce.department(),
-        image: faker.image.urlPicsumPhotos(),
-        createdAt: faker.date.past().toISOString(),
-        updatedAt: faker.date.recent().toISOString(),
+        price: faker.commerce.price(),
+        stock: faker.number.int({ min: 0, max: 10 }),
+        image: faker.image.urlPicsumPhotos()
     }));
 
     products.map(product =>
